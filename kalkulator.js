@@ -9,7 +9,7 @@ function odejmowanie(a, b) {
     document.body.innerHTML = "Wynik: " + (a - b);
 }
 
-function mnozenie(a, b) {
+function mnożnie(a, b) {
     document.body.innerHTML = "Wynik: " + (a * b);
 }
 
@@ -17,9 +17,12 @@ function dzielenie(a, b) {
     document.body.innerHTML = "Wynik: " + (a / b);
 }
 
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
 
+    document.body.innerHTML = "Podano niepoprawne liczby"
+}else{
+    let wynik = prompt("Wybierz działanie, które chcesz wykonać: dodawanie/odejmowanie/mnożenie/dzielenie");
 
-let wynik = prompt("Wybierz działanie, które chcesz wykonać: dodawanie/odejmowanie/mnozenie/dzielenie");
 
 switch (wynik) {
     case "dodawanie":
@@ -29,11 +32,14 @@ switch (wynik) {
         odejmowanie(firstNumber, secondNumber);
         break;
     case "mnozenie":
-        mnozenie(firstNumber, secondNumber);
+        mnożnie(firstNumber, secondNumber);
         break;
     case "dzielenie":
         dzielenie(firstNumber, secondNumber);
-        break;
+                if(secondNumber == 0){
+                    document.body.innerHTML = "Nie można dzielić przez zero";
+                } else break;
     default:
-        console.log("Niepoprawne działanie");
+                    document.body.innerHTML  = "Podałeś złą operację"
+}
 }
