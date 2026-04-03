@@ -38,7 +38,9 @@ switch (wynik) {
         dzielenie(firstNumber, secondNumber);
                 if(secondNumber == 0){
                     document.body.innerHTML = "Nie można dzielić przez zero";
-                } else break;
+                } else { dzielenie(firstNumber, secondNumber);
+                       }           
+        break;
     default:
                     document.body.innerHTML  = "Podałeś złą operację"
 }
