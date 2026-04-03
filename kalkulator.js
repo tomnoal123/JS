@@ -35,7 +35,6 @@ switch (wynik) {
         mnożnie(firstNumber, secondNumber);
         break;
     case "dzielenie":
-        dzielenie(firstNumber, secondNumber);
                 if(secondNumber == 0){
                     document.body.innerHTML = "Nie można dzielić przez zero";
                 } else { dzielenie(firstNumber, secondNumber);
